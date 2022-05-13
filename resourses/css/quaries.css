@@ -1,0 +1,116 @@
+@media screen and (max-width: 1200px) {
+    .row{
+        width: 100%;
+        padding: 0px 100px;
+    }
+
+    .menu-items{
+        top: 30%;
+    }
+
+    .menu-btn ion-icon{
+        right: 100px;
+    }
+
+    .hero-text-area{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-grid-container{
+        grid-template-columns: 1fr;
+        text-align: center;
+    
+    }
+    
+    .img-thumb img{
+        width: 50%;
+    }
+
+    .description{
+        margin-left: 60px;
+    }
+
+    .grid-process-container,
+    .grid-work-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    
+}
+
+@media screen and (max-width: 768px) {
+    .img-thumb img{
+        width: 70%;
+    }
+
+    .grid-experience-container,
+    .grid-contact-container{
+        grid-template-columns: 1fr;
+    }
+   
+}
+
+@media screen and (max-width: 480px) {
+    html,body{
+        font-size: 10px;
+    }
+
+    .img-thumb img{
+        width: 100%;
+    }
+
+    .description{
+        margin-left: 30px;
+    }
+
+    .grid-process-container{
+        grid-template-columns: 1fr;
+    }
+
+    #contact{
+        background-attachment: scroll;
+    }
+
+    .grid-signature-container{
+        grid-template-columns: 4fr 1fr;
+    }
+
+    .filter button{
+        margin-top: 15px;
+    }
+
+    .grid-work-items img{
+        width: auto;
+    }
+
+    .grid-work-container{
+        grid-auto-rows: auto;
+    }
+
+}
+@media screen and (max-width: 330px){
+
+    html,body{
+        font-size: 10px;
+    }
+    .row{
+        width: 100%;
+    }
+    .description{
+        margin-left:0;
+    }
+    .img-thumb img{
+        margin-left: -55px;
+    }
+    .intro {
+        margin-left: -40px;
+    }
+    .grid-contact-container{
+        max-width: 180px;
+        margin-left:35px;
+      
+        text-align: center;
+    }
+}

@@ -1,0 +1,644 @@
+/*==========================================================
+    
+    Template name - Paul lapkin 
+    Template uri  -
+    Description   - Portfolio template
+    Author        - Moshiur Rahman Rakib
+    Support       - moshiurrakib4@gmail.com
+    version       - 1.0
+
+==========================================================*/
+
+/*==========================================================
+    
+    css index :
+    1.Common css
+    2.Hero section
+    3.About section
+    4.Process section
+    5.Experience section
+    6.Work section
+    7.Signature section
+    8.Contact section
+
+
+==========================================================*/
+
+/*==========================================================
+    common css
+==========================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,body{
+   background-color:#fff;
+   color: #000;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;
+   font-size: 10px;
+   text-rendering: optimizeLegibility;
+   line-height: 1.5;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+h1,{
+    color: #fff;
+}
+
+p{
+    margin: 0px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Reusable components*/
+
+.row{
+    width: 1180px;
+    margin: auto;
+}
+
+section{
+    padding: 120px 0px;
+}
+
+.btn-color:link ,
+.btn-color:visited{
+    width:200px;
+    background: #ff2b4a;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    font-size: 160%;
+    padding: 10px 0px;
+    border: 2px solid #ff2b4a;
+    transition: .5s;
+}
+
+.btn-color:hover{
+    background: transparent;
+    color: #ff2b4a;
+}
+
+
+/*==========================================================
+            2.Hero section
+==========================================================*/
+
+#hero{
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url(img/hero.jpg) no-repeat center / cover;
+}
+
+.logo{
+   height: 45px;
+   margin-top: 45px;
+   float: left;
+}
+
+.nav-icon{
+    color: #fff;
+    float: right;
+    margin-top: 45px;
+}
+
+.nav-icon ion-icon{
+    font-size: 400%;
+    border: 1px solid #fff;
+}
+
+nav.uk-sticky-fixed{
+    background: rgba(0, 0, 0, 0.8);
+}
+
+nav.uk-sticky-fixed .logo{
+    margin: 15px 0px;
+}
+
+nav.uk-sticky-fixed .nav-icon{
+    margin: 15px 0px;
+}
+
+
+
+.hero-text-area{
+    width: 1180px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.hero-text-area h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 650%;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+h1::before{
+    content: ' ';
+    display:block;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+}
+
+h1::after{
+    content: ' ';
+    display:block;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+}
+
+.hero-text-area span{
+    display: inline-block;
+    font-size: 230%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.scroll-down{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+    margin: auto;
+    width: 45px;
+}
+
+.scroll-down a ion-icon{
+    color: #fff;
+    font-size: 500%;
+    position: relative;
+    animation: 3s scroll infinite ease ;
+    
+}
+
+@keyframes scroll {
+    0% {
+        top: 10px;
+    }
+    50% {
+        top: 30px;
+    }
+    100% {
+        top: 10px;
+    }
+}
+
+/*Hamburger menu*/
+
+.menu-container{
+    width: 100%;
+    height:0;
+    background: rgba(0, 0, 0, 0.95);
+    position: fixed;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.menu-btn ion-icon{
+    color: #fff;
+    font-size: 400%;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 45px;
+    right: 84px;
+    cursor: pointer;
+}
+
+.menu-items{
+    text-align: center;
+    position: relative;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.menu-items ul li{
+    margin-top: 15px;
+    list-style-type: none;
+
+}
+
+.menu-items ul li a{
+    color: #fff;
+    font-size: 200%;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.menu-items ul li:hover a{
+    color: #ff2b4a;
+    font-size: 220%;
+}
+
+/*==========================================================
+            3.About section
+==========================================================*/
+.about-grid-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 60px;
+}
+
+.img-thumb img{
+    width: 100%;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.intro{
+    font-size: 180%;
+    color: #737373;
+}
+
+.description{
+    font-size: 160%;
+    color: #737373;
+    margin: 15px 0px;
+    width: 80%;
+}
+
+/*==========================================================
+            4.Process section
+==========================================================*/
+
+#process{
+    background: #f6f6f6;
+}
+
+.process-title{
+    text-align: center;
+}
+
+.process-title h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 400%;
+    font-weight: 700;
+}
+
+.process-title p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #737373;
+    font-size: 160%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.grid-process-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    text-align: center;
+}
+
+.grid-process-item:nth-child(1){
+    background-color: #10c6fc;
+}
+
+.grid-process-item:nth-child(2){
+    background-color: #835aeb;
+}
+
+.grid-process-item:nth-child(3){
+    background-color: #002453;
+}
+
+.grid-process-item:nth-child(4){
+    background-color: #ff2b4a;
+}
+
+.grid-process-item{
+    color: #fff;
+    padding: 80px 0;
+} 
+
+.grid-process-item ion-icon{
+    font-size: 400%;
+    margin-bottom: 20px;
+}
+
+.grid-process-item h4{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 160%;
+    margin-top: 0px;
+    color: #fff;
+}
+
+/*==========================================================
+            5.Experience section
+==========================================================*/
+
+#experience{
+    background: url(img/experience.jpg) no-repeat center / cover;
+    font-family: 'Raleway', sans-serif;
+    background-attachment: fixed;
+}
+
+.grid-experience-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    color: #fff;
+}
+
+.grid-experience-items,
+.grid-education-items {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 45px 30px;
+}
+
+.grid-experience-items h3,
+.grid-education-items h3 {
+    font-size: 260%;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.job h4,
+.education h4{
+    font-size: 180%;
+    color: #fff;
+}
+
+.job span,
+.education span{
+    font-size: 160%;
+    margin: 10px 0px;
+    display: inline-block;
+}
+
+.job p,
+.education p{
+    font-size: 160%;
+}
+
+.grid-experience-container hr{
+    border: 0;
+    border-bottom: 2px solid #fff;
+    margin: 30px 0px;
+}
+
+/*==========================================================
+            6.Work section
+==========================================================*/
+
+.title{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.title h3{
+    font-size: 400%;
+    margin-bottom: 15px;
+}
+
+.title p{
+    color: #a0a0a0;
+    margin-bottom: 20px;
+}
+
+.grid-work-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(250px,auto);
+    
+    
+}
+
+.grid-work-items img{
+    height: 100%;
+    width: 100%;
+}
+
+.grid-work-items:nth-child(5){
+    grid-column: 1/3;
+    height: 250px; 
+}
+
+.uk-lightbox{
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.uk-lightbox-toolbar{
+    font-size: 160%;
+}
+
+.filter{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filter button{
+    padding: 5px 10px;
+    margin: 0px 5px;
+    color: #fff;
+    background: #222;
+    border: 1px solid #222;
+    font-size: 160%;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.filter button:hover{
+    background: #ff2b4a;
+    border-color: #ff2b4a;
+}
+
+.filter .mixitup-control-active{
+    background: #ff2b4a;
+    border-color: #ff2b4a;
+}
+
+
+/*==========================================================
+                7.Signature section
+==========================================================*/
+#signature{
+    background: url(img/testimonial.jpg) no-repeat center top/ cover;
+    color: #737373;
+}
+
+.grid-signature-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-gap: 10px;
+}
+
+.quote img{
+    height: 40px;
+}
+
+.grid-signature-items p{
+    font-size: 160%;
+    margin: 30px 0px;
+}
+
+.signature img{
+    margin-bottom: 15px;
+    height: 45px;
+}
+
+.grid-signature-items h4{
+    font-size: 180%;
+    color: #737373;
+}
+
+.grid-signature-items span{
+    font-size: 140%;
+}
+
+/*==========================================================
+            8.Contact section
+==========================================================*/
+#contact{
+    background: url(img/contact.jpg) no-repeat center top / cover ;
+    background-attachment: fixed;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+.grid-contact-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-gap: 10px;
+}
+
+.grid-contect-items:nth-child(1){
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px 30px;
+}
+
+.single-form input,textarea {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px;
+    margin: 10px 0px;
+}
+
+.grid-contect-items h3{
+    font-size: 260%;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.single-form-btn input{
+    width: 200px;
+    background: #ff2b4a;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    font-size: 120%;
+    padding: 10px 20px;
+    border: 2px solid #ff2b4a;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.single-form-btn{
+    text-align: right;
+    margin-top: 20px;
+}
+
+.single-form-btn input:hover{
+    background: transparent;
+    color: #ff2b4a;
+}
+
+.nested-grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+}
+
+.nested-grid-items{
+    background:rgba(0, 0, 0, 0.8) ;
+    padding: 40px 30px;
+}
+
+.nested-grid-items h3{
+    text-transform: uppercase;
+}
+
+.nested-grid-items p{
+    font-size: 160%;
+}
+
+
+/*==========================================================
+            9.Footer section
+==========================================================*/
+#footer{
+    background: #222;
+    text-align: center;
+    padding: 30px 0px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+.social-icons ul li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.social-icons{
+    margin-bottom: 15px;
+}
+
+.social-icons ul li ion-icon{
+    font-size: 180%;
+    color: #fff;
+    padding: 0px 10px;
+    border-right: 1px solid #fff;
+}
+
+.social-icons ul li ion-icon:hover{
+    color: #ff2b4a;
+}
+
+.totop .uk-totop{
+    margin-top: 20px;
+    border: 1px solid #999;
+    padding: 10px 6px;
+}
+
+.totop .uk-totop:hover{
+    background: #fff;
+    color: #000;
+}
